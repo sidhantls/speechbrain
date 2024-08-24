@@ -608,7 +608,7 @@ class VAD(Pretrained):
 
             # Get the boundaries
             energy_boundaries = self.get_boundaries(
-                energy_vad, output_value="seconds"
+                energy_vad.to(self.device), output_value="seconds"
             )
 
             # Get the final boundaries in the original signal
